@@ -130,6 +130,9 @@ def select_branch():
             continue
         else:
             msg = ""
+
+        if user_input == 'q':
+            return
         
         selected_branch = branches[int(user_input) - 1]
 
@@ -154,10 +157,13 @@ def create_branch():
             msg = "Empty input is invalid"
             continue
         elif new_branch in branches:
-            smg = f"Branch --{new_branch.title()}-- already exist"
+            msg = f"Branch --{new_branch.title()}-- already exist"
             continue
         else:
             msg = ""
+
+        if new_branch == 'q':
+            return 
         
         subprocess.run(['git', 'checkout', '-b', f'{new_branch}'])
         subprocess.run(['git', 'push', '-u', 'origin', f'{new_branch}'])
@@ -191,10 +197,10 @@ def set_branch():
             
         if user_input == "1":
             selected_branch = select_branch()
-            msg = f"Selected Branch: {success(select_branch())}"
+            msg = f"Selected Branch: {success(selected_branch)}"
         elif user_input == "2":
             selected_branch = create_branch()
-            msg = f"Selected Branch: {success(create_branch())}"
+            msg = f"Selected Branch: {success(selected_branch)}"
         else:
             break
 
@@ -304,16 +310,8 @@ def generate_content(limit=1, max_length=100):
         author = data[0]['author']
         slug = data[0]['authorSlug']
 
-        with open(f"Inspirational_Quote.md", "a") as file:
-            file.write(f"""
-
-    # Author: {author}
-    <div align="center">
-        <h3>
-            {content}
-        </h3>
-    <div>
-    """)
+        with open("Inspirational_Quote.md", "a", encoding="utf-8") as file:
+            file.write(f'### "{content}" - {author}\n')
         
         return slug
             
@@ -332,6 +330,12 @@ def generate_content(limit=1, max_length=100):
 
 def run_automation(selected_branch, commit_loops, remote):
     if not remote or remote.strip() == '':
+        return
+    
+    proceed = input(warning(f"You are about to push {commit_loops} commits to '{selected_branch}' "
+                    f"and merge into the default branch. Proceed? (y/n): ")).strip().lower()
+    if proceed != 'y':
+        print("Operation cancelled by user.")
         return
     
     for i in range(1, commit_loops + 1):
@@ -353,7 +357,6 @@ if __name__ == "__main__":
     selected_branch = "main" #Default branch
     remote = None
     loop_number = 3 #Default Loop Value
-
 
     while not exit_program:
         clear_screen()
