@@ -309,38 +309,38 @@ Remote          : {info(remote)}""")
     input("\nPress Enter to return...")
 
 
-def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
-    try:
-        # Ensure we are on the correct branch first
-        subprocess.run(['git', 'checkout', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+# def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
+#     try:
+#         # Ensure we are on the correct branch first
+#         subprocess.run(['git', 'checkout', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         
-        # Stage & commit
-        subprocess.run(['git', 'add', '.'], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        subprocess.run(['git', 'commit', '-m', msg], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+#         # Stage & commit
+#         subprocess.run(['git', 'add', '.'], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+#         subprocess.run(['git', 'commit', '-m', msg], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         
-        # Push branch
-        subprocess.run(['git', 'push', '-u', 'origin', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+#         # Push branch
+#         subprocess.run(['git', 'push', '-u', 'origin', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         
-        # Merge to main if requested
-        if merge_to_main:
-            try:
-                result = subprocess.run(
-                    ['git', 'rev-parse', '--abbrev-ref', 'origin/HEAD'],
-                    capture_output=True, text=True, check=True
-                )
-                main_branch = result.stdout.strip().split('/')[-1]
-            except subprocess.CalledProcessError:
-                main_branch = 'main'
+#         # Merge to main if requested
+#         if merge_to_main:
+#             try:
+#                 result = subprocess.run(
+#                     ['git', 'rev-parse', '--abbrev-ref', 'origin/HEAD'],
+#                     capture_output=True, text=True, check=True
+#                 )
+#                 main_branch = result.stdout.strip().split('/')[-1]
+#             except subprocess.CalledProcessError:
+#                 main_branch = 'main'
             
-            subprocess.run(['git', 'checkout', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            subprocess.run(['git', 'pull', 'origin', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            subprocess.run(['git', 'merge', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            subprocess.run(['git', 'push', 'origin', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+#             subprocess.run(['git', 'checkout', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+#             subprocess.run(['git', 'pull', 'origin', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+#             subprocess.run(['git', 'merge', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+#             subprocess.run(['git', 'push', 'origin', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     
-    except subprocess.CalledProcessError as e:
-        print(f"Git command failed: {e}")
-    except Exception as e:
-        print(f"Unexpected error: {e}")
+#     except subprocess.CalledProcessError as e:
+#         print(f"Git command failed: {e}")
+#     except Exception as e:
+#         print(f"Unexpected error: {e}")
 
 
 def generate_content(limit=1, max_length=100):
@@ -369,31 +369,82 @@ def generate_content(limit=1, max_length=100):
         print(f"Something went wrong: {e}")
 
 
+def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
+    try:
+        # Ensure we are on the correct branch first
+        subprocess.run(['git', 'checkout', selected_branch], check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+        # Stage & commit
+        subprocess.run(['git', 'add', '.'], check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(['git', 'commit', '-m', msg], check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+        # Push branch
+        subprocess.run(['git', 'push', '-u', 'origin', selected_branch], check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+        # Merge to main if requested (run once after all commits)
+        if merge_to_main:
+            try:
+                result = subprocess.run(
+                    ['git', 'rev-parse', '--abbrev-ref', 'origin/HEAD'],
+                    capture_output=True, text=True, check=True
+                )
+                main_branch = result.stdout.strip().split('/')[-1]
+            except subprocess.CalledProcessError:
+                main_branch = 'main'
+
+            subprocess.run(['git', 'checkout', main_branch], check=True,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run(['git', 'pull', 'origin', main_branch], check=True,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run(['git', 'merge', selected_branch], check=True,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run(['git', 'push', 'origin', main_branch], check=True,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    except subprocess.CalledProcessError as e:
+        print(f"Git command failed: {e}")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+
+
 def run_automation(selected_branch, commit_loops, remote):
     if not remote or remote.strip() == '':
         print("Remote not set. Cannot run automation.")
         return
 
-    proceed = input(warning(f"\nYou are about to push {commit_loops} commits to '{selected_branch}' "
-                    f"and merge into the default branch. Proceed? (y/n): ")).strip().lower()
+    proceed = input(f"\nYou are about to push {commit_loops} commits to '{selected_branch}' "
+                    f"and merge into the default branch. Proceed? (y/n): ").strip().lower()
     if proceed != 'y':
         print("Operation cancelled by user.")
         return
 
+    # Step 1: Commit & push multiple times on feature branch
     for i in range(1, commit_loops + 1):
-        quote_msg = generate_content()  # returns full quote text
+        quote_msg = generate_content()  # returns quote slug
         commit_msg = f"add: inspirational quote @{i} - {quote_msg}" if quote_msg else f"{i}: Commit"
 
         with yaspin(Spinners.line, text=f"Processing commit {i}/{commit_loops}") as spinner:
             try:
-                push_changes(selected_branch=selected_branch, remote=remote, msg=commit_msg, merge_to_main=True)
+                push_changes(selected_branch=selected_branch, remote=remote, msg=commit_msg, merge_to_main=False)
                 spinner.ok("✔")
-            except Exception as e:
+            except Exception:
                 spinner.fail("✖")
                 return
 
-    input("\nAutomation successfully operated. Press Enter to return to menu...")
+    # Step 2: Merge feature branch into main once
+    with yaspin(Spinners.line, text="Merging feature branch into main") as spinner:
+        try:
+            push_changes(selected_branch=selected_branch, remote=remote, msg="Merge to main", merge_to_main=True)
+            spinner.ok("✔")
+        except Exception:
+            spinner.fail("✖")
+            return
 
+    input("\nAutomation successfully operated. Press Enter to return to menu...")
     
 if __name__ == "__main__":
     
