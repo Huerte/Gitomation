@@ -11,3 +11,4 @@
 ### "A man is literally what he thinks." - James Allen
 ### "Leadership starts at the top." - Morgan Wootten
 ### "Where the willingness is great, the difficulties cannot be great." - Niccolo Machiavelli
+### "Goodness is the only investment that never fails." - Henry David Thoreau
