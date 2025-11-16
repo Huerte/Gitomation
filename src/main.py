@@ -271,28 +271,31 @@ def set_commit_loops():
     return loop_number
 
 
-def display_about():
+def display_about(loop_number):
     clear_screen()
     print(f"""
-{success('==============================')}
-         {success('GITOMATION')}
-{success('==============================')}
+{success('                  ==============================')}
+                            {success('GITOMATION')}
+{success('                  ==============================')}
 
 {info('Description:')}
-This tool automatically creates, pushes, and merges multiple commits
-to make your repository look very active. It is designed for repositories 
-you own.
+    This tool automatically creates, pushes, and merges multiple commits
+    to make your repository look very active. It is designed for repositories 
+    you own.
 
-{warning('⚠️  WARNING:')}
-- This will clutter your commit history.
-- Only use on repositories you control.
-- Make sure the repository is initialized before running automation.
-- First commit must exist or be created during initialization.
+{success(f"Hint:")}
+    Each commit loop creates 2 commits on GitHub. For {loop_number} loops, expect {loop_number*2} commits.
 
-Use this tool responsibly. All commits and merges are automated
-based on your chosen branch and loop settings.
+{warning('WARNING:')}
+    - This will clutter your commit history.
+    - Only use on repositories you control.
+    - Make sure the repository is initialized before running automation.
+    - First commit must exist or be created during initialization.
 
-{info('🔗 Repository:')} {highlight('https://github.com/Huerte/Gitomation')}
+    Use this tool responsibly. All commits and merges are automated
+    based on your chosen branch and loop settings.
+
+{info('Repository:')} {'https://github.com/Huerte/Gitomation'}
 """)
     input("Press Enter to return to menu...")
 
@@ -452,7 +455,7 @@ if __name__ == "__main__":
                 run_automation(selected_branch, loop_number, remote)
 
             elif user_input == '6':
-                display_about()
+                display_about(loop_number)
 
             elif user_input == '7':
                 exit_program = True
