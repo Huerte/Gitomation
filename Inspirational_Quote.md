@@ -19,3 +19,4 @@
 ### "Decide whether or not the goal is worth the risks involved. If it is, stop worrying." - Amelia Earhart
 ### "Failure is acceptable. Not trying is a whole different ball park." - Michael Jordan
 ### "Your dream has to be bigger than your fear." - Steve Harvey
+### "The enemy is a very good teacher." - Dalai Lama
