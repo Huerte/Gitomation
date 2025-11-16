@@ -9,13 +9,15 @@ import re
 import subprocess
 
 
+current_path = os.getcwd()
+
+
 def is_valid_git_url(url):
     # Matches HTTPS or SSH GitHub URLs
     https_pattern = r'^https://[\w\-]+(\.[\w\-]+)+/[\w\-]+/[\w\-]+\.git$'
     ssh_pattern   = r'^git@[\w\-]+:[\w\-]+/[\w\-]+\.git$'
     return re.match(https_pattern, url) or re.match(ssh_pattern, url)
 
-current_path = os.getcwd()
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -34,6 +36,7 @@ def display_choices(msg=""):
 [6] About
 [7] Exit
 ===============================""")
+
 
 def initialize_repo():
     clear_screen()
@@ -75,6 +78,7 @@ def initialize_repo():
 
     input("\n\nPress Enter to return to menu...")
     return remote
+
 
 def get_branches():
     branches = []
@@ -197,6 +201,7 @@ def set_branch():
     input("\n\nPress Enter to return to menu...")
     return selected_branch
 
+
 def set_commit_loops():
     msg = ""
     while True:
@@ -259,7 +264,7 @@ Remote          : {info(remote)}""")
     input("\nPress Enter to return...")
 
 
-def push_changes(selected_branch, remote, msg="commit"):
+def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
     try:
         subprocess.run(['git', 'add', '.'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
@@ -270,6 +275,20 @@ def push_changes(selected_branch, remote, msg="commit"):
         subprocess.run(['git', 'checkout', selected_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
         subprocess.run(["git", "push", "-u", "origin", selected_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+
+        # Merge changes
+        if merge_to_main:
+            result = subprocess.run(
+                ['git', 'rev-parse', '--abbrev-ref', 'origin/HEAD'],
+                capture_output=True, text=True
+            )
+            main_branch = result.stdout.strip().split('/')[-1]
+
+            subprocess.run(['git', 'checkout', main_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run(['git', 'pull', 'origin', main_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run(['git', 'merge', selected_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run(['git', 'push', 'origin', main_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     except subprocess.CalledProcessError as e:
         print(f"Git command failed: {e}")
@@ -319,7 +338,7 @@ def run_automation(selected_branch, commit_loops, remote):
         with yaspin(text=f"Processing commit {i}/{commit_loops}", color="cyan") as spinner:
             try:
                 msg = generate_content()        
-                push_changes(msg=f"add: inspirational quote @{msg}")  
+                push_changes(msg=f"add: inspirational quote @{msg}", merge_to_main=True)  
                 spinner.ok("OK")          
 
             except Exception as e:
