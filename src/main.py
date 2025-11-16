@@ -4,6 +4,7 @@ from sys import exit
 import os
 import requests
 from yaspin import yaspin
+from yaspin.spinners import Spinners
 from time import sleep
 import re
 import subprocess
@@ -245,6 +246,7 @@ def set_branch():
 
 def set_commit_loops():
     msg = ""
+    loop_number = 3 # Default loop
     while True:
         clear_screen()
         print("==== Set Commit Loops ====")
@@ -262,6 +264,8 @@ def set_commit_loops():
 
         except ValueError:
             msg = warning("Invalid input for number of loops")
+        except KeyboardInterrupt:
+            break
     
     input("\n\nPress Enter to return to menu...")
     return loop_number
@@ -363,25 +367,30 @@ def generate_content(limit=1, max_length=100):
 
 def run_automation(selected_branch, commit_loops, remote):
     if not remote or remote.strip() == '':
+        print("Remote not set. Cannot run automation.")
         return
-    
-    proceed = input(warning(f"You are about to push {commit_loops} commits to '{selected_branch}' "
+
+    proceed = input(warning(f"\nYou are about to push {commit_loops} commits to '{selected_branch}' "
                     f"and merge into the default branch. Proceed? (y/n): ")).strip().lower()
     if proceed != 'y':
         print("Operation cancelled by user.")
         return
-    
+
     for i in range(1, commit_loops + 1):
-        print(f"\n===== Processing commit {i}/{commit_loops} =====")
-        try:
-            msg = generate_content()
-            msg = f"{i}: Commit" if not msg else msg
-            push_changes(selected_branch=selected_branch, remote=remote, msg=f"add: inspirational quote @{msg}", merge_to_main=True)
-            print(f"✔ Commit {i} successful: add: inspirational quote @{msg}")
-        except Exception as e:
-            print(f"✖ Commit {i} failed: {e}")
+        quote_msg = generate_content()  # returns full quote text
+        commit_msg = f"add: inspirational quote @{i} - {quote_msg}" if quote_msg else f"{i}: Commit"
 
+        with yaspin(Spinners.line, text=f"Processing commit {i}/{commit_loops}") as spinner:
+            try:
+                push_changes(selected_branch=selected_branch, remote=remote, msg=commit_msg, merge_to_main=True)
+                spinner.ok("✔")
+                print(f"Commit {i} successful: {commit_msg}")
+            except Exception as e:
+                spinner.fail("✖")
+                print(f"Commit {i} failed: {e}")
+                return
 
+    input("\nAutomation successfully operated. Press Enter to return to menu...")
 if __name__ == "__main__":
     
     exit_program = False

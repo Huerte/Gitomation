@@ -9,3 +9,4 @@
 ### "I'd rather welcome change than cling to the past." - Robert Kiyosaki
 ### "Alone we can do so little; together we can do so much." - Helen Keller
 ### "A man is literally what he thinks." - James Allen
+### "Leadership starts at the top." - Morgan Wootten
