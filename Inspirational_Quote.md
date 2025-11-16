@@ -28,3 +28,4 @@
 ### "All life is a manifestation of the spirit, the manifestation of love." - Morihei Ueshiba
 ### "You have the ability, now apply yourself." - Benjamin Mays
 ### "Don't hesitate or allow yourself to make excuses. Just get out and do it." - Christopher McCandless
+### "You are today where your thoughts have brought you." - James Allen
