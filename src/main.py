@@ -311,13 +311,17 @@ Remote          : {info(remote)}""")
 
 def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
     try:
-        # Hide output
+        # Ensure we are on the correct branch first
+        subprocess.run(['git', 'checkout', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        
+        # Stage & commit
         subprocess.run(['git', 'add', '.'], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         subprocess.run(['git', 'commit', '-m', msg], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        subprocess.run(['git', 'checkout', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        subprocess.run(["git", "remote", "set-url", "origin", remote], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        
+        # Push branch
         subprocess.run(['git', 'push', '-u', 'origin', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
+        
+        # Merge to main if requested
         if merge_to_main:
             try:
                 result = subprocess.run(
@@ -327,12 +331,12 @@ def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
                 main_branch = result.stdout.strip().split('/')[-1]
             except subprocess.CalledProcessError:
                 main_branch = 'main'
-
+            
             subprocess.run(['git', 'checkout', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             subprocess.run(['git', 'pull', 'origin', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             subprocess.run(['git', 'merge', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             subprocess.run(['git', 'push', 'origin', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
+    
     except subprocess.CalledProcessError as e:
         print(f"Git command failed: {e}")
     except Exception as e:
