@@ -7,3 +7,4 @@
 ### "Never take your position for granted and never let any favors you receive go to your head." - Robert Greene
 ### "The truth is not for all men, but for those who seek it." - Ayn Rand
 ### "I'd rather welcome change than cling to the past." - Robert Kiyosaki
+### "Alone we can do so little; together we can do so much." - Helen Keller
