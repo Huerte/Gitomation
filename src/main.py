@@ -38,6 +38,41 @@ def display_choices(msg=""):
 ===============================""")
 
 
+def get_remote():
+    try:
+        result = subprocess.run(
+            ["git", "remote", "-v"],
+            capture_output=True,
+            text=True
+        )
+        remotes = result.stdout.strip().splitlines()
+
+        if not remotes:
+            return None 
+        
+        for line in remotes:
+            if line.startswith("origin"):
+                parts = line.split()
+                if len(parts) >= 2:
+                    url = parts[1]
+                    return url
+
+        return None
+    except Exception:
+        return None
+
+def get_current_branch():
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+            capture_output=True,
+            text=True
+        )
+        branch = result.stdout.strip()
+        return branch if branch else None
+    except Exception:
+        return None
+    
 def initialize_repo():
     clear_screen()
     print("==== Initialize Repository ====\n")
@@ -212,7 +247,7 @@ def set_commit_loops():
     msg = ""
     while True:
         clear_screen()
-        print("==== Set Commit Loops ====\n")
+        print("==== Set Commit Loops ====")
         print(msg)
 
         try:
@@ -272,29 +307,35 @@ Remote          : {info(remote)}""")
 
 def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
     try:
-        subprocess.run(['git', 'add', '.'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(['git', 'add', '.'], check=True)
 
-        subprocess.run(['git', 'commit', '-m', msg], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(['git', 'commit', '-m', msg], check=True)
 
-        subprocess.run(["git", "remote", "add", "origin", remote], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(['git', 'checkout', selected_branch], check=True)
 
-        subprocess.run(['git', 'checkout', selected_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(["git", "remote", "set-url", "origin", remote], check=True)
 
-        subprocess.run(["git", "push", "-u", "origin", selected_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(['git', 'push', '-u', 'origin', selected_branch], check=True)
 
-
-        # Merge changes
         if merge_to_main:
-            result = subprocess.run(
-                ['git', 'rev-parse', '--abbrev-ref', 'origin/HEAD'],
-                capture_output=True, text=True
-            )
-            main_branch = result.stdout.strip().split('/')[-1]
+            try:
+                result = subprocess.run(
+                    ['git', 'rev-parse', '--abbrev-ref', 'origin/HEAD'],
+                    capture_output=True, text=True, check=True
+                )
+                main_branch = result.stdout.strip().split('/')[-1]
+            except subprocess.CalledProcessError:
+                main_branch = 'main' 
 
-            subprocess.run(['git', 'checkout', main_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            subprocess.run(['git', 'pull', 'origin', main_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            subprocess.run(['git', 'merge', selected_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            subprocess.run(['git', 'push', 'origin', main_branch], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+            subprocess.run(['git', 'checkout', main_branch], check=True)
+
+            subprocess.run(['git', 'pull', 'origin', main_branch], check=True)
+
+            subprocess.run(['git', 'merge', selected_branch], check=True)
+
+            subprocess.run(['git', 'push', 'origin', main_branch], check=True)
+
 
     except subprocess.CalledProcessError as e:
         print(f"Git command failed: {e}")
@@ -322,7 +363,7 @@ def generate_content(limit=1, max_length=100):
         print("Network problem (server down?)")
 
     except requests.exceptions.HTTPError as e:
-        print(f"HTTP error occurred: {e} - Status code: {data.status_code}")
+        print(f"HTTP error occurred: {e}")
 
     except requests.exceptions.RequestException as e:
         print(f"Something went wrong: {e}")
@@ -339,23 +380,24 @@ def run_automation(selected_branch, commit_loops, remote):
         return
     
     for i in range(1, commit_loops + 1):
-        with yaspin(text=f"Processing commit {i}/{commit_loops}", color="cyan") as spinner:
-            try:
-                msg = generate_content()        
-                push_changes(msg=f"add: inspirational quote @{msg}", merge_to_main=True)  
-                spinner.ok("OK")          
+        print(f"\n===== Processing commit {i}/{commit_loops} =====")
+        try:
+            msg = generate_content()
+            msg = f"{i}: Commit" if not msg else msg
+            push_changes(selected_branch=selected_branch, remote=remote, msg=f"add: inspirational quote @{msg}", merge_to_main=True)
+            print(f"✔ Commit {i} successful: add: inspirational quote @{msg}")
+        except Exception as e:
+            print(f"✖ Commit {i} failed: {e}")
 
-            except Exception as e:
-                spinner.fail("Failed")
-                print(f"Error during commit {i}: {e}")
+
 
 
 if __name__ == "__main__":
     
     exit_program = False
     msg = ""
-    selected_branch = "main" #Default branch
-    remote = None
+    selected_branch = get_current_branch()
+    remote = get_remote()
     loop_number = 3 #Default Loop Value
 
     while not exit_program:
@@ -387,7 +429,7 @@ if __name__ == "__main__":
                 display_settings(selected_branch, loop_number, remote)
 
             elif user_input == '5':
-                run_automation()
+                run_automation(selected_branch, loop_number, remote)
 
             elif user_input == '6':
                 display_about()
