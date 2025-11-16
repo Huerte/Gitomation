@@ -29,3 +29,4 @@
 ### "You have the ability, now apply yourself." - Benjamin Mays
 ### "Don't hesitate or allow yourself to make excuses. Just get out and do it." - Christopher McCandless
 ### "You are today where your thoughts have brought you." - James Allen
+### "Absorb what is useful, discard what is not, add what is uniquely your own." - Bruce Lee
