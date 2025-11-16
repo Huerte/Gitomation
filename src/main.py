@@ -389,6 +389,8 @@ def run_automation(selected_branch, commit_loops, remote):
                 return
 
     input("\nAutomation successfully operated. Press Enter to return to menu...")
+
+    
 if __name__ == "__main__":
     
     exit_program = False

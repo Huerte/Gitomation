@@ -15,3 +15,4 @@
 ### "You cannot push anyone up a ladder unless he is willing to climb a little himself." - Andrew Carnegie
 ### "The only man who never makes mistakes is the man who never does anything." - Theodore Roosevelt
 ### "Common sense is not so common." - Voltaire
+### "The big thing is to make a winning effort. I'm not obsessed with wins." - Morgan Wootten
