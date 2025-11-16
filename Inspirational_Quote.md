@@ -25,3 +25,4 @@
 ### "When asked, how do you write? I invariably answer, one word at a time." - Stephen King
 ### "Change happens when the pain of holding on becomes greater than the fear of letting go." - Spencer Johnson
 ### "I like the dreams of the future better than the history of the past." - Thomas Jefferson
+### "All life is a manifestation of the spirit, the manifestation of love." - Morihei Ueshiba
