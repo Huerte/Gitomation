@@ -14,3 +14,4 @@
 ### "Goodness is the only investment that never fails." - Henry David Thoreau
 ### "You cannot push anyone up a ladder unless he is willing to climb a little himself." - Andrew Carnegie
 ### "The only man who never makes mistakes is the man who never does anything." - Theodore Roosevelt
+### "Common sense is not so common." - Voltaire
