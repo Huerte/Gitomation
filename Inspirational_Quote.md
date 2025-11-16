@@ -10,3 +10,4 @@
 ### "Alone we can do so little; together we can do so much." - Helen Keller
 ### "A man is literally what he thinks." - James Allen
 ### "Leadership starts at the top." - Morgan Wootten
+### "Where the willingness is great, the difficulties cannot be great." - Niccolo Machiavelli
