@@ -27,3 +27,4 @@
 ### "I like the dreams of the future better than the history of the past." - Thomas Jefferson
 ### "All life is a manifestation of the spirit, the manifestation of love." - Morihei Ueshiba
 ### "You have the ability, now apply yourself." - Benjamin Mays
+### "Don't hesitate or allow yourself to make excuses. Just get out and do it." - Christopher McCandless
