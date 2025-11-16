@@ -384,10 +384,8 @@ def run_automation(selected_branch, commit_loops, remote):
             try:
                 push_changes(selected_branch=selected_branch, remote=remote, msg=commit_msg, merge_to_main=True)
                 spinner.ok("✔")
-                print(f"Commit {i} successful: {commit_msg}")
             except Exception as e:
                 spinner.fail("✖")
-                print(f"Commit {i} failed: {e}")
                 return
 
     input("\nAutomation successfully operated. Press Enter to return to menu...")

@@ -12,3 +12,4 @@
 ### "Leadership starts at the top." - Morgan Wootten
 ### "Where the willingness is great, the difficulties cannot be great." - Niccolo Machiavelli
 ### "Goodness is the only investment that never fails." - Henry David Thoreau
+### "You cannot push anyone up a ladder unless he is willing to climb a little himself." - Andrew Carnegie
