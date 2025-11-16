@@ -16,3 +16,4 @@
 ### "The only man who never makes mistakes is the man who never does anything." - Theodore Roosevelt
 ### "Common sense is not so common." - Voltaire
 ### "The big thing is to make a winning effort. I'm not obsessed with wins." - Morgan Wootten
+### "Decide whether or not the goal is worth the risks involved. If it is, stop worrying." - Amelia Earhart
