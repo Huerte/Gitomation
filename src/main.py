@@ -386,8 +386,8 @@ def run_automation(selected_branch, commit_loops, remote):
         print("Remote not set. Cannot run automation.")
         return
 
-    proceed = input(f"\nYou are about to push {commit_loops} commits to '{selected_branch}' "
-                    f"and merge into the default branch. Proceed? (y/n): ").strip().lower()
+    proceed = input(warning(f"\nYou are about to push {commit_loops} commits to '{selected_branch}' "
+                    f"and merge into the default branch. Proceed? (y/n): ")).strip().lower()
     if proceed != 'y':
         print("Operation cancelled by user.")
         return
