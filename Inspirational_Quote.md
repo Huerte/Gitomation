@@ -21,3 +21,4 @@
 ### "Your dream has to be bigger than your fear." - Steve Harvey
 ### "The enemy is a very good teacher." - Dalai Lama
 ### "Failure is a great teacher. If you're open to it every mistake has a lesson to offer." - Oprah Winfrey
+### "Be fascinated instead of frustrated." - Jim Rohn
