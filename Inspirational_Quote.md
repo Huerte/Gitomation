@@ -6,3 +6,4 @@
 ### "Rather than love, than money, than fame, give me truth." - Henry David Thoreau
 ### "Never take your position for granted and never let any favors you receive go to your head." - Robert Greene
 ### "The truth is not for all men, but for those who seek it." - Ayn Rand
+### "I'd rather welcome change than cling to the past." - Robert Kiyosaki

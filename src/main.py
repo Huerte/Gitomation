@@ -307,15 +307,12 @@ Remote          : {info(remote)}""")
 
 def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
     try:
-        subprocess.run(['git', 'add', '.'], check=True)
-
-        subprocess.run(['git', 'commit', '-m', msg], check=True)
-
-        subprocess.run(['git', 'checkout', selected_branch], check=True)
-
-        subprocess.run(["git", "remote", "set-url", "origin", remote], check=True)
-
-        subprocess.run(['git', 'push', '-u', 'origin', selected_branch], check=True)
+        # Hide output
+        subprocess.run(['git', 'add', '.'], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(['git', 'commit', '-m', msg], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(['git', 'checkout', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(["git", "remote", "set-url", "origin", remote], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(['git', 'push', '-u', 'origin', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
         if merge_to_main:
             try:
@@ -325,17 +322,12 @@ def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
                 )
                 main_branch = result.stdout.strip().split('/')[-1]
             except subprocess.CalledProcessError:
-                main_branch = 'main' 
+                main_branch = 'main'
 
-
-            subprocess.run(['git', 'checkout', main_branch], check=True)
-
-            subprocess.run(['git', 'pull', 'origin', main_branch], check=True)
-
-            subprocess.run(['git', 'merge', selected_branch], check=True)
-
-            subprocess.run(['git', 'push', 'origin', main_branch], check=True)
-
+            subprocess.run(['git', 'checkout', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run(['git', 'pull', 'origin', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run(['git', 'merge', selected_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run(['git', 'push', 'origin', main_branch], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     except subprocess.CalledProcessError as e:
         print(f"Git command failed: {e}")
@@ -388,8 +380,6 @@ def run_automation(selected_branch, commit_loops, remote):
             print(f"✔ Commit {i} successful: add: inspirational quote @{msg}")
         except Exception as e:
             print(f"✖ Commit {i} failed: {e}")
-
-
 
 
 if __name__ == "__main__":
