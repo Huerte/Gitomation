@@ -33,3 +33,4 @@
 ### "He who knows how to wait need make no concessions." - Sigmund Freud
 ### "Health is the greatest of all possessions." - Jonathan Swift
 ### "In order to be irreplaceable one must always be different." - Coco Chanel
+### "TEAMWORK: the fuel that allows common people attain uncommon results." - Andrew Carnegie
