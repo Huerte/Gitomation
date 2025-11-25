@@ -31,3 +31,4 @@
 ### "You are today where your thoughts have brought you." - James Allen
 ### "Absorb what is useful, discard what is not, add what is uniquely your own." - Bruce Lee
 ### "He who knows how to wait need make no concessions." - Sigmund Freud
+### "Health is the greatest of all possessions." - Jonathan Swift
