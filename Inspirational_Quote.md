@@ -7,3 +7,4 @@
 ### "He who knows best knows how little he knows." - Thomas Jefferson
 ### "Every failure brings with it the seed of an equivalent success." - Napoleon Hill
 ### "The secret of getting ahead is getting started." - Mark Twain
+### "The future depends on what you do today." - Mahatma Gandhi
