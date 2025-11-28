@@ -9,3 +9,4 @@
 ### "The secret of getting ahead is getting started." - Mark Twain
 ### "The future depends on what you do today." - Mahatma Gandhi
 ### "When we strive to become better than we are, everything around us becomes better, too." - Paulo Coelho
+### "Hope means hoping when everything seems hopeless." - Gilbert Chesterton
