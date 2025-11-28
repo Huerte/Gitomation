@@ -14,3 +14,4 @@
 ### "Your life does not get better by chance, it gets better by change." - Jim Rohn
 ### "What worries you, masters you." - John Locke
 ### "An un-examined life is not worth living." - Socrates
+### "Attitude, not aptitude, determines altitude." - Zig Ziglar

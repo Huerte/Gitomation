@@ -758,6 +758,8 @@ def run_automation(selected_branch, commit_loops, remote):
     print()
     print_section_header("Running Automation")
     print()
+
+    clear_screen()
     
     successful_commits = 0
     failed_commits = 0
