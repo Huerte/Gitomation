@@ -20,3 +20,4 @@
 ### "Every man desires to live long, but no man wishes to be old." - Jonathan Swift
 ### "All leaders are readers." - Jim Rohn
 ### "Life is much more successfully looked at from a single window." - F. Scott Fitzgerald
+### "If you love life, don't waste time, for time is what life is made up of." - Bruce Lee
