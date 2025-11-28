@@ -6,3 +6,4 @@
 ### "Waste not fresh tears over old griefs." - Euripides
 ### "The one who boasts does so only out of a feeling of inferiority." - Alfred Adler
 ### "Yesterday is the past, tomorrow is the future, today is a gift - that's why it's called the present." - George Bernard Shaw
+### "We are always complaining that our days are few, and acting as though there would be no end of them." - Seneca
