@@ -30,3 +30,4 @@
 ### "Goodness is the only investment that never fails." - Henry David Thoreau
 ### "To be of use to the world is the only way to be happy." - Hans Christian Andersen
 ### "Mind is the creator of everything. You should therefore guide it to create only good." - Paramahansa Yogananda
+### "The secret of life is to fall seven times and to get up eight times." - Paulo Coelho
