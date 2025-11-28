@@ -4,3 +4,4 @@
 ### "Fear is your worst enemy. Risk is your best friend." - Gurbaksh Chahal
 ### "Let not your mind run on what you lack as much as on what you have already." - Marcus Aurelius
 ### "Waste not fresh tears over old griefs." - Euripides
+### "The one who boasts does so only out of a feeling of inferiority." - Alfred Adler
