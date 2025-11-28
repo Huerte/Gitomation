@@ -9,3 +9,4 @@
 ### "We are always complaining that our days are few, and acting as though there would be no end of them." - Seneca
 ### "Rudeness is the weak man's imitation of strength." - Eric Hoffer
 ### "When you've got nothing, you've got nothing to lose." - Bob Dylan
+### "Do not be so open-minded that your brains fall out." - Gilbert Chesterton
