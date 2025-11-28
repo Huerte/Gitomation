@@ -134,10 +134,10 @@ def initialize_repo():
                 try:
                     subprocess.run(["git", "init"], check=True, 
                                  stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                    spinner.ok("[OK]")
+                    spinner.ok(f"{success('[OK]')}")
                     print_status("Repository initialized successfully.", "success")
                 except subprocess.CalledProcessError:
-                    spinner.fail("[FAILED]")
+                    spinner.fail(f"{error('[FAILED]')}")
                     print_status("Failed to initialize repository.", "error")
                     input("\n  Press Enter to return to menu...")
                     return None
@@ -180,11 +180,11 @@ def initialize_repo():
             try:
                 subprocess.run(["git", "remote", "add", "origin", remote], check=True,
                              stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                spinner.ok("[OK]")
+                spinner.ok(f"{success('[OK]')}")
                 print_status(f"Remote '{info(remote)}' added successfully.", "success")
                 break
             except subprocess.CalledProcessError:
-                spinner.fail("[FAILED]")
+                spinner.fail(f"{error('[FAILED]')}")
                 print_status("Failed to add remote. It may already exist.", "error")
                 print()
     
@@ -197,10 +197,10 @@ def initialize_repo():
                              stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
                 subprocess.run(["git", "commit", "-m", "Initial commit"], check=True,
                              stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                spinner.ok("[OK]")
+                spinner.ok(f"{success('[OK]')}")
                 print_status("Initial commit created successfully.", "success")
             except subprocess.CalledProcessError:
-                spinner.fail("[FAILED]")
+                spinner.fail(f"{error('[FAILED]')}")
                 print_status("Failed to create initial commit.", "error")
 
     print()
@@ -290,9 +290,9 @@ def select_branch():
             try:
                 subprocess.run(['git', 'checkout', selected_branch], check=True,
                              stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                spinner.ok("[OK]")
+                spinner.ok(f"{success('[OK]')}")
             except subprocess.CalledProcessError:
-                spinner.fail("[FAILED]")
+                spinner.fail(f"{error('[FAILED]')}")
                 print_status("Failed to checkout branch.", "error")
                 print()
                 input(f"  {highlight('Press Enter to continue...')}")
@@ -304,10 +304,10 @@ def select_branch():
                 try:
                     subprocess.run(['git', 'pull', 'origin', main_branch], check=True,
                                  stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                    spinner.ok("[OK]")
+                    spinner.ok(f"{success('[OK]')}")
                     print_status(f"Branch updated with latest changes from {info(main_branch)}.", "success")
                 except subprocess.CalledProcessError:
-                    spinner.fail("[FAILED]")
+                    spinner.fail(f"{error('[FAILED]')}")
                     print_status("Failed to pull changes. Continuing anyway.", "warning")
         
         print_status(f"Successfully switched to branch: {success(selected_branch)}", "success")
@@ -357,9 +357,9 @@ def create_branch(branch_name=None):
         try:
             subprocess.run(['git', 'checkout', '-b', new_branch], check=True,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            spinner.ok("[OK]")
+            spinner.ok(f"{success('[OK]')}")
         except subprocess.CalledProcessError:
-            spinner.fail("[FAILED]")
+            spinner.fail(f"{error('[FAILED]')}")
             print_status("Failed to create branch locally.", "error")
             if not branch_name:
                 print()
@@ -370,10 +370,10 @@ def create_branch(branch_name=None):
         try:
             subprocess.run(['git', 'push', '-u', 'origin', new_branch], check=True,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            spinner.ok("[OK]")
+            spinner.ok(f"{success('[OK]')}")
             print_status(f"Branch '{success(new_branch)}' created and pushed successfully.", "success")
         except subprocess.CalledProcessError:
-            spinner.fail("[FAILED]")
+            spinner.fail(f"{error('[FAILED]')}")
             print_status("Branch created locally but failed to push to remote.", "warning")
             print_status("You may need to configure remote or check your connection.", "info")
     
@@ -713,9 +713,9 @@ def delete_branch(selected_branch):
                 try:
                     subprocess.run(['git', 'branch', '-D', selected_branch], check=True,
                                  stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                    spinner.ok("[OK]")
+                    spinner.ok(f"{success('[OK]')}")
                 except subprocess.CalledProcessError as e:
-                    spinner.fail("[FAILED]")
+                    spinner.fail(f"{error('[FAILED]')}")
                     print_status(f"Failed to delete local branch: {e}", "warning")
     except subprocess.CalledProcessError:
         print_status("Failed to check local branches.", "warning")
@@ -725,12 +725,12 @@ def delete_branch(selected_branch):
         try:
             subprocess.run(['git', 'push', 'origin', '--delete', selected_branch], check=True,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            spinner.ok("[OK]")
+            spinner.ok(f"{success('[OK]')}")
         except subprocess.CalledProcessError:
             spinner.fail("[SKIP]")
 
         except Exception as e:
-            spinner.fail("[FAILED]")
+            spinner.fail(f"{error('[FAILED]')}")
             print_status(f"Unexpected error deleting remote branch: {e}", "warning")
 
 
@@ -833,18 +833,18 @@ def run_automation(selected_branch, commit_loops, remote):
         
         with yaspin(Spinners.dots, text=f"Processing commit {i}/{commit_loops}") as spinner:
             if commit_changes(msg=commit_msg):
-                spinner.ok("[OK]")
+                spinner.ok(f"{success('[OK]')}")
                 successful_commits += 1
             else:
-                spinner.fail("[FAILED]")
+                spinner.fail(f"{error('[FAILED]')}")
                 failed_commits += 1
 
     print()
     with yaspin(Spinners.dots, text=f"Pushing {successful_commits} commits to {selected_branch}") as spinner:
         if push_changes(selected_branch=selected_branch, remote=remote, msg="Push commits", merge_to_main=False):
-            spinner.ok("[OK]")
+            spinner.ok(f"{success('[OK]')}")
         else:
-            spinner.fail("[FAILED]")
+            spinner.fail(f"{error('[FAILED]')}")
             print_status("Failed to push commits. Automation stopped.", "error")
             print()
             input(f"  {highlight('Press Enter to return to menu...')}")
@@ -852,9 +852,9 @@ def run_automation(selected_branch, commit_loops, remote):
     
     with yaspin(Spinners.dots, text=f"Merging {selected_branch} into {main_branch}") as spinner:
         if push_changes(selected_branch=selected_branch, remote=remote, msg="Merge to main", merge_to_main=True):
-            spinner.ok("[OK]")
+            spinner.ok(f"{success('[OK]')}")
         else:
-            spinner.fail("[FAILED]")
+            spinner.fail(f"{error('[FAILED]')}")
             print_status("Failed to merge branch. Automation stopped.", "error")
             print()
             input(f"  {highlight('Press Enter to return to menu...')}")
