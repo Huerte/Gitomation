@@ -477,7 +477,7 @@ def set_commit_loops():
             if loop_number <= 0:
                 msg = warning("Loop number must be greater than 0. Please enter a positive number.")
             elif loop_number > 100:
-                confirm = input(f"  {warning('Warning:')} You selected {loop_number} loops ({loop_number*2} commits). Continue? (y/n): ").lower().strip()
+                confirm = input(f"  {warning('Warning:')} You selected {loop_number} loops ({loop_number} commits). Continue? (y/n): ").lower().strip()
                 if confirm == 'y':
                     msg = ""
                     break
@@ -565,7 +565,7 @@ def display_settings(selected_branch, commit_loops, remote):
     print()
     
 
-    print(f"  {highlight('Commit Loops:')} {info(commit_loops)} ({commit_loops * 2} total commits)")
+    print(f"  {highlight('Commit Loops:')} {info(commit_loops)} ({commit_loops} total commits)")
     print()
     
 
@@ -838,10 +838,6 @@ def run_automation(selected_branch, commit_loops, remote):
             else:
                 spinner.fail("[FAILED]")
                 failed_commits += 1
-                
-        if i != commit_loops + 1:
-            clear_screen()
-    
 
     print()
     with yaspin(Spinners.dots, text=f"Pushing {successful_commits} commits to {selected_branch}") as spinner:
