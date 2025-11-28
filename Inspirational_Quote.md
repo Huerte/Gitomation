@@ -3,3 +3,4 @@
 ### "Don't let the noise of others opinions drown out your inner voice." - Steve Jobs
 ### "Fear is your worst enemy. Risk is your best friend." - Gurbaksh Chahal
 ### "Let not your mind run on what you lack as much as on what you have already." - Marcus Aurelius
+### "Waste not fresh tears over old griefs." - Euripides
