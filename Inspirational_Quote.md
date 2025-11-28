@@ -11,3 +11,4 @@
 ### "When we strive to become better than we are, everything around us becomes better, too." - Paulo Coelho
 ### "Hope means hoping when everything seems hopeless." - Gilbert Chesterton
 ### "He who has overcome his fears will truly be free." - Aristotle
+### "Where violence reigns, reason is weak." - Nicolas Chamfort
