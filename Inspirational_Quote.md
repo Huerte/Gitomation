@@ -43,3 +43,4 @@
 ### "Give out what you most want to come back." - Robin Sharma
 ### "Truth will always be truth, regardless of lack of understanding, disbelief or ignorance." - W. Clement Stone
 ### "We tend to live up to our expectations." - Earl Nightingale
+### "You can have it all. You just can't have it all at once." - Oprah Winfrey
