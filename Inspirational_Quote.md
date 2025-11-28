@@ -26,3 +26,4 @@
 ### "The source of a true smile is an awakened mind." - Thich Nhat Hanh
 ### "It is in the darkness that one finds the light." - Meister Eckhart
 ### "Light a candle instead of cursing the darkness." - Eleanor Roosevelt
+### "All men who have achieved great things have been great dreamers." - Orison Swett Marden
