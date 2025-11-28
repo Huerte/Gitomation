@@ -17,3 +17,4 @@
 ### "Everything flows, nothing stands still." - Heraclitus
 ### "The greatest miracle is to be alive." - Thich Nhat Hanh
 ### "Just do what must be done. This may not be happiness but it is greatness." - George Bernard Shaw
+### "Every man desires to live long, but no man wishes to be old." - Jonathan Swift
