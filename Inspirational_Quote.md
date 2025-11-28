@@ -32,3 +32,4 @@
 ### "Mind is the creator of everything. You should therefore guide it to create only good." - Paramahansa Yogananda
 ### "The secret of life is to fall seven times and to get up eight times." - Paulo Coelho
 ### "The dream is free, but the hustle is sold separately." - Steve Harvey
+### "To every action there is always opposed an equal reaction." - Isaac Newton
