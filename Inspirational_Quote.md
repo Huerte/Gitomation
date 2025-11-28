@@ -24,3 +24,4 @@
 ### "If you take responsibility for yourself you will develop a hunger to accomplish your dream." - Les Brown
 ### "Honor is the foundation of courage." - Amelia Earhart
 ### "The source of a true smile is an awakened mind." - Thich Nhat Hanh
+### "It is in the darkness that one finds the light." - Meister Eckhart
