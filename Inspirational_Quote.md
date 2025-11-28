@@ -23,3 +23,4 @@
 ### "If you love life, don't waste time, for time is what life is made up of." - Bruce Lee
 ### "If you take responsibility for yourself you will develop a hunger to accomplish your dream." - Les Brown
 ### "Honor is the foundation of courage." - Amelia Earhart
+### "The source of a true smile is an awakened mind." - Thich Nhat Hanh
