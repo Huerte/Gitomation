@@ -34,3 +34,9 @@
 ### "Health is the greatest of all possessions." - Jonathan Swift
 ### "In order to be irreplaceable one must always be different." - Coco Chanel
 ### "TEAMWORK: the fuel that allows common people attain uncommon results." - Andrew Carnegie
+### "One is never afraid of the unknown; one is afraid of the known coming to an end." - Jiddu Krishnamurti
+### "Never take your position for granted and never let any favors you receive go to your head." - Robert Greene
+### "Every drop in the ocean counts." - Yoko Ono
+### "I live by letting things happen." - Dogen
+### "When you rise in the morning, form a resolution to make the day a happy one for a fellow creature." - Sydney Smith
+### "When you lose your desire for things that do not matter, you will be free." - Morihei Ueshiba

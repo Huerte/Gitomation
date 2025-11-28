@@ -338,21 +338,33 @@ def generate_content(limit=1, max_length=100):
         print(f"Something went wrong: {e}")
 
 
-def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
+def commit_changes(msg="commit"):
     try:
-        subprocess.run(['git', 'checkout', selected_branch], check=True,
-                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
         subprocess.run(['git', 'add', '.'], check=True,
                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
-        subprocess.run(['git', 'add', '.'], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
         status = subprocess.run(['git', 'diff', '--cached', '--quiet'])
         if status.returncode != 0:
             subprocess.run(['git', 'commit', '-m', msg], check=True,
                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    
+    except subprocess.CalledProcessError as e:
+        print(f"Git command failed: {e}")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+
+
+def change_branch(branch_name):
+    try:
+        subprocess.run(['git', 'checkout', branch_name], check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except subprocess.CalledProcessError as e:
+        print(f"Git command failed: {e}")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+
+
+def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
+    try:
         subprocess.run(['git', 'push', '-u', 'origin', selected_branch], check=True,
                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
@@ -391,6 +403,8 @@ def run_automation(selected_branch, commit_loops, remote):
     if proceed != 'y':
         print("Operation cancelled by user.")
         return
+    
+    change_branch(selected_branch)
 
     for i in range(1, commit_loops + 1):
         quote_msg = generate_content()  # returns quote slug
@@ -398,7 +412,7 @@ def run_automation(selected_branch, commit_loops, remote):
 
         with yaspin(Spinners.line, text=f"Processing commit {i}/{commit_loops}") as spinner:
             try:
-                push_changes(selected_branch=selected_branch, remote=remote, msg=commit_msg, merge_to_main=False)
+                commit_changes(msg=commit_msg)
                 spinner.ok("✔")
             except Exception:
                 spinner.fail("✖")
