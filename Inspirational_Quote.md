@@ -21,3 +21,4 @@
 ### "All leaders are readers." - Jim Rohn
 ### "Life is much more successfully looked at from a single window." - F. Scott Fitzgerald
 ### "If you love life, don't waste time, for time is what life is made up of." - Bruce Lee
+### "If you take responsibility for yourself you will develop a hunger to accomplish your dream." - Les Brown
