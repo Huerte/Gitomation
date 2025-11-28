@@ -680,7 +680,7 @@ def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
         return False
     
 def delete_branch(selected_branch):
-    """Delete a branch locally and remotely with proper error handling."""
+    
     if not selected_branch or selected_branch.strip() == '':
         return
     
@@ -690,10 +690,10 @@ def delete_branch(selected_branch):
         print_status(f"Cannot delete main branch: {selected_branch}", "warning")
         return
 
-    # Check if we're currently on the branch to delete
+
     current_branch = get_current_branch()
     if current_branch == selected_branch:
-        # Switch to main before deleting
+
         try:
             subprocess.run(['git', 'checkout', main_branch], check=True,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -701,7 +701,7 @@ def delete_branch(selected_branch):
             print_status(f"Failed to switch to {main_branch}. Cannot delete branch.", "error")
             return
 
-    # Check if branch exists locally
+
     try:
         result = subprocess.run(['git', 'branch'], capture_output=True, text=True, check=True)
         branches = [b.strip().replace('* ', '') for b in result.stdout.splitlines()]
@@ -720,7 +720,7 @@ def delete_branch(selected_branch):
     except subprocess.CalledProcessError:
         print_status("Failed to check local branches.", "warning")
 
-    # Try to delete remote branch
+
     with yaspin(Spinners.dots, text=f"Deleting remote branch {selected_branch}") as spinner:
         try:
             subprocess.run(['git', 'push', 'origin', '--delete', selected_branch], check=True,
@@ -728,7 +728,7 @@ def delete_branch(selected_branch):
             spinner.ok("[OK]")
         except subprocess.CalledProcessError:
             spinner.fail("[SKIP]")
-            # Remote branch might not exist, which is fine
+
         except Exception as e:
             spinner.fail("[FAILED]")
             print_status(f"Unexpected error deleting remote branch: {e}", "warning")
@@ -783,7 +783,7 @@ def run_automation(selected_branch, commit_loops, remote):
         print()
         print_status("Automation cancelled by user.", "info")
         
-        # Auto-delete branch if it was auto-generated
+
         if selected_branch and selected_branch.strip() != '':
             main_branch = get_main_branch() or "main"
             if selected_branch != main_branch and selected_branch.startswith("feature/gitomation-"):
@@ -838,6 +838,9 @@ def run_automation(selected_branch, commit_loops, remote):
             else:
                 spinner.fail("[FAILED]")
                 failed_commits += 1
+                
+        if i != commit_loops + 1:
+            clear_screen()
     
 
     print()
