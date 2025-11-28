@@ -18,3 +18,4 @@
 ### "Courage Is a Love Affair with the Unknown" - Osho
 ### "Turn off your mind, relax, and float downstream." - John Lennon
 ### "All problems are illusions of the mind." - Eckhart Tolle
+### "The measure of who we are is what we do with what we have." - Vince Lombardi
