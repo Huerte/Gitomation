@@ -41,3 +41,4 @@
 ### "When you rise in the morning, form a resolution to make the day a happy one for a fellow creature." - Sydney Smith
 ### "When you lose your desire for things that do not matter, you will be free." - Morihei Ueshiba
 ### "Give out what you most want to come back." - Robin Sharma
+### "Truth will always be truth, regardless of lack of understanding, disbelief or ignorance." - W. Clement Stone
