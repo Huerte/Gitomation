@@ -22,3 +22,4 @@
 ### "Freedom from desire leads to inner peace." - Lao Tzu
 ### "Life is like a wheel. Sooner or later, it always comes around to where you started again." - Stephen King
 ### "Every limit is a beginning as well as an ending." - George Eliot
+### "Choose a job you love, and you will never have to work a day in your life." - Confucius
