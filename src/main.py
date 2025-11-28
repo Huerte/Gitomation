@@ -763,41 +763,22 @@ def run_automation(selected_branch, commit_loops, remote):
     failed_commits = 0
     
     for i in range(1, commit_loops + 1):
-        print_status(f"Processing commit {i}/{commit_loops}", "info")
-        
-        with yaspin(Spinners.dots, text="Generating content") as spinner:
-            quote_msg = generate_content()
-            if quote_msg:
-                spinner.ok("[OK]")
-            else:
-                spinner.fail("[SKIP]")
-        
+        quote_msg = generate_content()
         commit_msg = f"add: inspirational quote @{i} - {quote_msg}" if quote_msg else f"commit: automation loop {i}"
         
-        with yaspin(Spinners.dots, text=f"Committing changes ({i}/{commit_loops})") as spinner:
+        with yaspin(Spinners.dots, text=f"Processing commit {i}/{commit_loops}") as spinner:
             if commit_changes(msg=commit_msg):
                 spinner.ok("[OK]")
                 successful_commits += 1
-                print_status(f"Commit {i} created successfully.", "success")
             else:
                 spinner.fail("[FAILED]")
                 failed_commits += 1
-                print_status(f"Commit {i} failed.", "error")
-                print()
-                print_status("Continuing with remaining commits...", "warning")
-        
-        print()
     
 
-    print_separator("-", 60)
     print()
-    print_section_header("Pushing Changes")
-    print()
-    
     with yaspin(Spinners.dots, text=f"Pushing {successful_commits} commits to {selected_branch}") as spinner:
         if push_changes(selected_branch=selected_branch, remote=remote, msg="Push commits", merge_to_main=False):
             spinner.ok("[OK]")
-            print_status(f"Successfully pushed {successful_commits} commits to {info(selected_branch)}.", "success")
         else:
             spinner.fail("[FAILED]")
             print_status("Failed to push commits. Automation stopped.", "error")
@@ -805,16 +786,9 @@ def run_automation(selected_branch, commit_loops, remote):
             input(f"  {highlight('Press Enter to return to menu...')}")
             return
     
-    print()
-    print_separator("-", 60)
-    print()
-    print_section_header("Merging to Main Branch")
-    print()
-    
     with yaspin(Spinners.dots, text=f"Merging {selected_branch} into {main_branch}") as spinner:
         if push_changes(selected_branch=selected_branch, remote=remote, msg="Merge to main", merge_to_main=True):
             spinner.ok("[OK]")
-            print_status(f"Successfully merged {info(selected_branch)} into {info(main_branch)}.", "success")
         else:
             spinner.fail("[FAILED]")
             print_status("Failed to merge branch. Automation stopped.", "error")
@@ -824,12 +798,6 @@ def run_automation(selected_branch, commit_loops, remote):
     
 
     if auto_delete_branch:
-        print()
-        print_separator("-", 60)
-        print()
-        print_section_header("Cleaning Up")
-        print()
-        
         with yaspin(Spinners.dots, text=f"Deleting branch {selected_branch}") as spinner:
             try:
                 subprocess.run(['git', 'branch', '-D', selected_branch], check=True,
@@ -837,11 +805,9 @@ def run_automation(selected_branch, commit_loops, remote):
                 subprocess.run(['git', 'push', 'origin', '--delete', selected_branch], check=True,
                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
                 spinner.ok("[OK]")
-                print_status(f"Branch {info(selected_branch)} deleted successfully.", "success")
             except subprocess.CalledProcessError as e:
                 spinner.fail("[FAILED]")
                 print_status(f"Failed to delete branch: {e}", "warning")
-                print_status("Branch may still exist locally or remotely.", "info")
             except Exception as e:
                 spinner.fail("[FAILED]")
                 print_status(f"Unexpected error: {e}", "error")
