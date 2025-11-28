@@ -19,3 +19,4 @@
 ### "Just do what must be done. This may not be happiness but it is greatness." - George Bernard Shaw
 ### "Every man desires to live long, but no man wishes to be old." - Jonathan Swift
 ### "All leaders are readers." - Jim Rohn
+### "Life is much more successfully looked at from a single window." - F. Scott Fitzgerald
