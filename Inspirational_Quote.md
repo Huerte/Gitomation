@@ -12,3 +12,4 @@
 ### "Hope means hoping when everything seems hopeless." - Gilbert Chesterton
 ### "He who has overcome his fears will truly be free." - Aristotle
 ### "Where violence reigns, reason is weak." - Nicolas Chamfort
+### "Your next step is simple. You are the first domino." - Gary W. Keller
