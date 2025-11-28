@@ -696,7 +696,7 @@ def run_automation(selected_branch, commit_loops, remote):
     
 
     if not selected_branch or selected_branch.strip() == '' or selected_branch == get_main_branch():
-        print()
+        clear_screen()
         print_status("No valid branch selected. Auto-generating branch...", "info")
         selected_branch = auto_create_branch()
         if not selected_branch:
