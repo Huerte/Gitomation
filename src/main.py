@@ -225,6 +225,12 @@ def create_branch(branch_name=None):
         
     return new_branch
 
+
+def auto_create_branch():
+    auto_branch_name = f"feature/gitomation-{int(subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).strip(), 16)}"
+    return create_branch(auto_branch_name)
+
+
 def set_branch():
     msg = ""
     selected_branch = None
@@ -256,8 +262,7 @@ def set_branch():
             selected_branch = create_branch()
             msg = f"Selected Branch: {success(selected_branch)}"
         elif user_input == "3":
-            auto_branch_name = f"feature/gitomation-{int(subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).strip(), 16)}"
-            selected_branch = create_branch(auto_branch_name)
+            selected_branch = auto_create_branch()
             msg = f"Selected Branch: {success(selected_branch)}"
             break
         else:
@@ -422,6 +427,9 @@ def run_automation(selected_branch, commit_loops, remote):
         print("Remote not set. Cannot run automation.")
         return
     
+    if not selected_branch or selected_branch.strip() == '' or selected_branch == get_main_branch():
+        selected_branch = auto_create_branch()
+    
     clear_screen()
     print("==== Running Automation ====")
 
@@ -437,6 +445,8 @@ def run_automation(selected_branch, commit_loops, remote):
         auto_delete_branch = True
     
     change_branch(selected_branch)
+
+    clear_screen()
 
     for i in range(1, commit_loops + 1):
         quote_msg = generate_content()  # returns quote slug
