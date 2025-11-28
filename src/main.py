@@ -39,6 +39,18 @@ def display_choices(msg=""):
 ===============================""")
 
 
+def get_main_branch():
+    try:
+        result = subprocess.run(
+            ['git', 'rev-parse', '--abbrev-ref', 'origin/HEAD'],
+            capture_output=True,
+            text=True
+        )
+        main_branch = result.stdout.strip().split('/')[-1]
+        return main_branch
+    except Exception:
+        return None
+    
 def get_remote():
     try:
         result = subprocess.run(
@@ -142,7 +154,6 @@ def get_branches():
         if line:
             branches.append(line)
             
-    print(branches)
     return branches
 
 def select_branch():
@@ -173,16 +184,18 @@ def select_branch():
         selected_branch = branches[int(user_input) - 1]
 
         subprocess.run(['git', 'checkout', f'{selected_branch}'])
+        subprocess.run(['git', 'pull', 'origin', f'{get_main_branch()}'])
         break
 
     input("\n\nPress Enter to return to menu...")
     return selected_branch
 
-def create_branch():
-    new_branch = None
+def create_branch(branch_name=None):
+    new_branch = "" if not branch_name else branch_name
     branches = get_branches()
     msg = ""
-    while True:
+
+    while new_branch == "":
         clear_screen()
         print("Enter new branch name")
         print("=======================")
@@ -194,18 +207,22 @@ def create_branch():
             continue
         elif new_branch in branches:
             msg = f"Branch --{new_branch.title()}-- already exist"
+            new_branch = ""
             continue
         else:
             msg = ""
 
         if new_branch == 'q':
             return 
-        
-        subprocess.run(['git', 'checkout', '-b', f'{new_branch}'])
-        subprocess.run(['git', 'push', '-u', 'origin', f'{new_branch}'])
+
         break
+
+    subprocess.run(['git', 'checkout', '-b', f'{new_branch}'])
+    subprocess.run(['git', 'push', '-u', 'origin', f'{new_branch}'])
     
-    input("\n\nPress Enter to return to menu...")
+    if not branch_name:
+        input("\n\nPress Enter to return to menu...")
+        
     return new_branch
 
 def set_branch():
@@ -217,7 +234,8 @@ def set_branch():
         print(msg)
         print("""[1] Select existing branch
 [2] Create new branch
-[3] Back to Main Menu
+[3] Auto-generate branch
+[4] Back to Main Menu
 ===========================""")
         user_input = input(">> ").strip()
 
@@ -225,7 +243,7 @@ def set_branch():
         if user_input == "":
             msg = warning("Empty input is invalid")
             continue
-        elif user_input not in ['1', '2', '3']:
+        elif user_input not in ['1', '2', '3', '4']:
             msg = warning("Invalid user choice")
             continue
         else:
@@ -237,6 +255,11 @@ def set_branch():
         elif user_input == "2":
             selected_branch = create_branch()
             msg = f"Selected Branch: {success(selected_branch)}"
+        elif user_input == "3":
+            auto_branch_name = f"feature/gitomation-{int(subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).strip(), 16)}"
+            selected_branch = create_branch(auto_branch_name)
+            msg = f"Selected Branch: {success(selected_branch)}"
+            break
         else:
             break
 
@@ -394,15 +417,24 @@ def push_changes(selected_branch, remote, msg="commit", merge_to_main=False):
 
 
 def run_automation(selected_branch, commit_loops, remote):
+    auto_delete_branch = False
     if not remote or remote.strip() == '':
         print("Remote not set. Cannot run automation.")
         return
+    
+    clear_screen()
+    print("==== Running Automation ====")
 
     proceed = input(warning(f"\nYou are about to push {commit_loops} commits to '{selected_branch}' "
-                    f"and merge into the default branch. Proceed? (y/n): ")).strip().lower()
+                f"and merge into the default branch. Proceed? (y/n): ")).strip().lower()
     if proceed != 'y':
         print("Operation cancelled by user.")
         return
+
+    branch_condition = input(highlight("\nDo you want to delete the branch after merging? (y/n): ")).strip().lower()
+
+    if branch_condition == 'y':
+        auto_delete_branch = True
     
     change_branch(selected_branch)
 
@@ -425,9 +457,26 @@ def run_automation(selected_branch, commit_loops, remote):
         except Exception:
             spinner.fail("✖")
             return
-
-    input("\nAutomation successfully operated. Press Enter to return to menu...")
     
+    if auto_delete_branch:
+        with yaspin(Spinners.line, text="Deleting feature branch") as spinner:
+            try:
+                subprocess.run(['git', 'branch', '-D', selected_branch], check=True,
+                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                subprocess.run(['git', 'push', 'origin', '--delete', selected_branch], check=True,
+                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                spinner.ok("✔")
+            except subprocess.CalledProcessError as e:
+                spinner.fail("✖")
+                print(f"Git command failed: {e}")
+            except Exception as e:
+                spinner.fail("✖")
+                print(f"Unexpected error: {e}")
+
+    clear_screen()
+
+    input(success("Automation successfully operated. Press Enter to return to menu..."))
+
     
 if __name__ == "__main__":
     
