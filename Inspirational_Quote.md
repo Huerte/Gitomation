@@ -16,3 +16,4 @@
 ### "An un-examined life is not worth living." - Socrates
 ### "Attitude, not aptitude, determines altitude." - Zig Ziglar
 ### "Courage Is a Love Affair with the Unknown" - Osho
+### "Turn off your mind, relax, and float downstream." - John Lennon
