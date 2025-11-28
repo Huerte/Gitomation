@@ -16,3 +16,4 @@
 ### "It's better to stand by someone's side than by yourself." - Jack London
 ### "Everything flows, nothing stands still." - Heraclitus
 ### "The greatest miracle is to be alive." - Thich Nhat Hanh
+### "Just do what must be done. This may not be happiness but it is greatness." - George Bernard Shaw
