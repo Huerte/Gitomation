@@ -15,3 +15,4 @@
 ### "Your next step is simple. You are the first domino." - Gary W. Keller
 ### "It's better to stand by someone's side than by yourself." - Jack London
 ### "Everything flows, nothing stands still." - Heraclitus
+### "The greatest miracle is to be alive." - Thich Nhat Hanh
