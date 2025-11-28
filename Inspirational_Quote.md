@@ -40,3 +40,4 @@
 ### "I live by letting things happen." - Dogen
 ### "When you rise in the morning, form a resolution to make the day a happy one for a fellow creature." - Sydney Smith
 ### "When you lose your desire for things that do not matter, you will be free." - Morihei Ueshiba
+### "Give out what you most want to come back." - Robin Sharma
