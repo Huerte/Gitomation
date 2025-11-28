@@ -29,3 +29,4 @@
 ### "All men who have achieved great things have been great dreamers." - Orison Swett Marden
 ### "Goodness is the only investment that never fails." - Henry David Thoreau
 ### "To be of use to the world is the only way to be happy." - Hans Christian Andersen
+### "Mind is the creator of everything. You should therefore guide it to create only good." - Paramahansa Yogananda
