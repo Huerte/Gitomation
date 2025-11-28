@@ -5,3 +5,4 @@
 ### "Don't try to steer the river." - Deepak Chopra
 ### "If you run you stand a chance of losing, but if you don't run you've already lost." - Barack Obama
 ### "He who knows best knows how little he knows." - Thomas Jefferson
+### "Every failure brings with it the seed of an equivalent success." - Napoleon Hill
