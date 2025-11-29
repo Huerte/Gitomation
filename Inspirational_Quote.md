@@ -36,3 +36,4 @@
 ### "First learn the meaning of what you say, and then speak." - Epictetus
 ### "What we know is a drop, what we don't know is an ocean." - Isaac Newton
 ### "Whenever you do a thing, act as if all the world were watching." - Thomas Jefferson
+### "If they wrote it to make money, don't read it." - Naval Ravikant
