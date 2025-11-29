@@ -52,3 +52,4 @@
 ### "Go for it now. The future is promised to no one." - Wayne Dyer
 ### "By words the mind is winged." - Aristophanes
 ### "Everything you've ever wanted is on the other side of fear." - Brian Tracy
+### "We suffer more often in imagination than in reality." - Seneca
