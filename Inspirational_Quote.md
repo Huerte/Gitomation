@@ -57,3 +57,4 @@
 ### "No one can confidently say that he will still be living tomorrow." - Euripides
 ### "Life can be wonderful if you're not afraid of it." - Charlie Chaplin
 ### "Successful people ask better questions, and as a result, they get better answers." - Tony Robbins
+### "Man must use what he has, not hope for what is not." - G.I. Gurdjieff
