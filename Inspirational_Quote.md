@@ -34,3 +34,4 @@
 ### "The dream is free, but the hustle is sold separately." - Steve Harvey
 ### "To every action there is always opposed an equal reaction." - Isaac Newton
 ### "First learn the meaning of what you say, and then speak." - Epictetus
+### "What we know is a drop, what we don't know is an ocean." - Isaac Newton
