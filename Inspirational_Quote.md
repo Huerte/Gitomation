@@ -58,3 +58,4 @@
 ### "Life can be wonderful if you're not afraid of it." - Charlie Chaplin
 ### "Successful people ask better questions, and as a result, they get better answers." - Tony Robbins
 ### "Man must use what he has, not hope for what is not." - G.I. Gurdjieff
+### "When you change what you believe, you change what you do." - Spencer Johnson
