@@ -37,3 +37,4 @@
 ### "What we know is a drop, what we don't know is an ocean." - Isaac Newton
 ### "Whenever you do a thing, act as if all the world were watching." - Thomas Jefferson
 ### "If they wrote it to make money, don't read it." - Naval Ravikant
+### "The ladder of success is best climbed by stepping on the rungs of opportunity." - Ayn Rand
