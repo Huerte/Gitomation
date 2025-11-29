@@ -55,3 +55,4 @@
 ### "We suffer more often in imagination than in reality." - Seneca
 ### "Yesterday is history, tomorrow is a mystery, today is God's gift, that's why we call it the present." - Joan Rivers
 ### "No one can confidently say that he will still be living tomorrow." - Euripides
+### "Life can be wonderful if you're not afraid of it." - Charlie Chaplin
