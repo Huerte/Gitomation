@@ -48,3 +48,4 @@
 ### "Courage is fear that has said its prayers and decided to go forward anyway." - Joyce Meyer
 ### "Life is the art of drawing sufficient conclusions from insufficient premises." - Samuel Butler
 ### "Giving is living. If you stop wanting to give, there's nothing more to live for." - Audrey Hepburn
+### "Definiteness of purpose is the starting point of all achievement." - W. Clement Stone
