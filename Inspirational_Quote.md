@@ -50,3 +50,4 @@
 ### "Giving is living. If you stop wanting to give, there's nothing more to live for." - Audrey Hepburn
 ### "Definiteness of purpose is the starting point of all achievement." - W. Clement Stone
 ### "Go for it now. The future is promised to no one." - Wayne Dyer
+### "By words the mind is winged." - Aristophanes
