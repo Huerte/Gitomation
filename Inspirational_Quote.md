@@ -39,3 +39,4 @@
 ### "If they wrote it to make money, don't read it." - Naval Ravikant
 ### "The ladder of success is best climbed by stepping on the rungs of opportunity." - Ayn Rand
 ### "You become a worrier by practicing worry. You become free of worry by practicing the opposite." - Norman Vincent Peale
+### "Courage is fear that has said its prayers and decided to go forward anyway." - Joyce Meyer
