@@ -46,3 +46,4 @@
 ### "Life can be the scariest and most beautiful thing simultaneously." - Maxime Lagace
 ### "The truth is not for all men, but for those who seek it." - Ayn Rand
 ### "Courage is fear that has said its prayers and decided to go forward anyway." - Joyce Meyer
+### "Life is the art of drawing sufficient conclusions from insufficient premises." - Samuel Butler
