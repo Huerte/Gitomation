@@ -45,3 +45,4 @@
 ### "The difference between winning and losing is most often not quitting." - Walt Disney
 ### "Life can be the scariest and most beautiful thing simultaneously." - Maxime Lagace
 ### "The truth is not for all men, but for those who seek it." - Ayn Rand
+### "Courage is fear that has said its prayers and decided to go forward anyway." - Joyce Meyer
