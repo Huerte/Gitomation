@@ -51,3 +51,4 @@
 ### "Definiteness of purpose is the starting point of all achievement." - W. Clement Stone
 ### "Go for it now. The future is promised to no one." - Wayne Dyer
 ### "By words the mind is winged." - Aristophanes
+### "Everything you've ever wanted is on the other side of fear." - Brian Tracy
