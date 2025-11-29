@@ -44,3 +44,4 @@
 ### "Life without love is like a tree without blossoms or fruit." - Kahlil Gibran
 ### "The difference between winning and losing is most often not quitting." - Walt Disney
 ### "Life can be the scariest and most beautiful thing simultaneously." - Maxime Lagace
+### "The truth is not for all men, but for those who seek it." - Ayn Rand
