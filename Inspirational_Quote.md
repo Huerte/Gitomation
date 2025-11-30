@@ -62,3 +62,4 @@
 ### "We must be free not because we claim freedom, but because we practice it." - William Faulkner
 ### "The highest level of wisdom is when you not only accept but love adversity." - Maxime Lagace
 ### "The worst part of success is trying to find someone who is happy for you." - Bette Midler
+### "When you are content to be simply yourself and don't compare or compete, everybody will respect you." - Lao Tzu
