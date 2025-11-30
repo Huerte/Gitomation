@@ -68,3 +68,4 @@
 ### "If you can't, you must. If you must, you can." - Tony Robbins
 ### "Love is merely the name for the desire and pursuit of the whole." - Aristophanes
 ### "The best way to find yourself is to lose yourself in the service of others." - Mahatma Gandhi
+### "To plant a garden is to believe in tomorrow." - Audrey Hepburn
