@@ -59,3 +59,4 @@
 ### "Successful people ask better questions, and as a result, they get better answers." - Tony Robbins
 ### "Man must use what he has, not hope for what is not." - G.I. Gurdjieff
 ### "When you change what you believe, you change what you do." - Spencer Johnson
+### "We must be free not because we claim freedom, but because we practice it." - William Faulkner
