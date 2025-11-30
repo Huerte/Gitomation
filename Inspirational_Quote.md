@@ -65,3 +65,4 @@
 ### "When you are content to be simply yourself and don't compare or compete, everybody will respect you." - Lao Tzu
 ### "The more you like yourself, the less you are like anyone else, which makes you unique." - Walt Disney
 ### "Realize deeply that the present moment is all you ever have." - Eckhart Tolle
+### "If you can't, you must. If you must, you can." - Tony Robbins
