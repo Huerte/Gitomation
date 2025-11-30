@@ -64,3 +64,4 @@
 ### "The worst part of success is trying to find someone who is happy for you." - Bette Midler
 ### "When you are content to be simply yourself and don't compare or compete, everybody will respect you." - Lao Tzu
 ### "The more you like yourself, the less you are like anyone else, which makes you unique." - Walt Disney
+### "Realize deeply that the present moment is all you ever have." - Eckhart Tolle
