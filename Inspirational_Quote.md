@@ -72,3 +72,4 @@
 ### "The opportunity of defeating the enemy is provided by the enemy himself." - Sun Tzu
 ### "Don't waste time on excuses. Just get it done." - Ralph Marston
 ### "If we are not able to smile, then the world will not have peace." - Thich Nhat Hanh
+### "The quality of your life is determined by the quality of questions you ask." - Tony Robbins
