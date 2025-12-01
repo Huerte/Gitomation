@@ -71,3 +71,4 @@
 ### "To plant a garden is to believe in tomorrow." - Audrey Hepburn
 ### "The opportunity of defeating the enemy is provided by the enemy himself." - Sun Tzu
 ### "Don't waste time on excuses. Just get it done." - Ralph Marston
+### "If we are not able to smile, then the world will not have peace." - Thich Nhat Hanh
