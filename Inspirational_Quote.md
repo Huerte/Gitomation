@@ -70,3 +70,4 @@
 ### "The best way to find yourself is to lose yourself in the service of others." - Mahatma Gandhi
 ### "To plant a garden is to believe in tomorrow." - Audrey Hepburn
 ### "The opportunity of defeating the enemy is provided by the enemy himself." - Sun Tzu
+### "Don't waste time on excuses. Just get it done." - Ralph Marston
