@@ -74,3 +74,4 @@
 ### "If we are not able to smile, then the world will not have peace." - Thich Nhat Hanh
 ### "The quality of your life is determined by the quality of questions you ask." - Tony Robbins
 ### "Everything you look at can become a fairy tale and you can get a story from everything you touch." - Hans Christian Andersen
+### "Peace of mind is that mental condition in which you have accepted the worst." - Lin Yutang
