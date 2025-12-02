@@ -93,3 +93,4 @@
 ### "Watch what you say, and whatever you say, practice it." - Soyen Shaku
 ### "The hardest arithmetic to master is that which enables us to count our blessings." - Eric Hoffer
 ### "The important thing is not what one is born with but what use one makes of that equipment." - Alfred Adler
+### "It's your road, and yours alone, others may walk it with you, but no one can walk it for you." - Rumi
