@@ -86,3 +86,4 @@
 ### "The guest will judge better of a feast than the cook." - Aristotle
 ### "If you don't make things happen then things will happen to you." - Robert Collier
 ### "You can't make someone feel good about themselves until you feel good about yourself." - Robin Sharma
+### "You can have results or excuses, but not both." - Arnold Schwarzenegger
