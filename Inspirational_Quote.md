@@ -100,3 +100,4 @@
 ### "The most wasted day of all is that on which we have not laughed." - Nicolas Chamfort
 ### "Imagination is more important than knowledge." - Albert Einstein
 ### "Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree." - Martin Luther
+### "A man's worth is no greater than his ambitions." - Marcus Aurelius
