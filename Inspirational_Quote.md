@@ -75,3 +75,4 @@
 ### "The quality of your life is determined by the quality of questions you ask." - Tony Robbins
 ### "Everything you look at can become a fairy tale and you can get a story from everything you touch." - Hans Christian Andersen
 ### "Peace of mind is that mental condition in which you have accepted the worst." - Lin Yutang
+### "Just do what must be done. This may not be happiness but it is greatness." - George Bernard Shaw
