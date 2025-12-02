@@ -113,3 +113,4 @@
 ### "Imagination is the true magic carpet." - Norman Vincent Peale
 ### "The attempt to escape from pain, is what creates more pain." - Gabor Mate
 ### "The mind can calculate, but the spirit yearns, and the heart wants what the heart wants." - Stephen King
+### "Actions are the seeds of fate. Deeds grow into destiny." - Harry S. Truman
