@@ -104,3 +104,4 @@
 ### "He that can have patience can have what he will." - Benjamin Franklin
 ### "Failure is the key to success; each mistake teaches us something." - Morihei Ueshiba
 ### "Do not anticipate trouble, or worry about what may never happen. Keep in the sunlight." - Benjamin Franklin
+### "The more reasons you have for achieving your goal, the more determined you will become." - Brian Tracy
