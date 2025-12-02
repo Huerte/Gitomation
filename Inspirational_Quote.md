@@ -98,3 +98,4 @@
 ### "A man with outward courage dares to die: a man with inner courage dares to live." - Lao Tzu
 ### "There is no truth. There is only perception." - Gustave Flaubert
 ### "The most wasted day of all is that on which we have not laughed." - Nicolas Chamfort
+### "Imagination is more important than knowledge." - Albert Einstein
