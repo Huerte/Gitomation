@@ -79,3 +79,4 @@
 ### "Who wishes to fight must first count the cost." - Sun Tzu
 ### "If your mind is empty, it is always ready for anything, it is open to everything." - Shunryu Suzuki
 ### "Life is what happens to you while you're busy making other plans." - John Lennon
+### "Knowledge has to be improved, challenged, and increased constantly, or it vanishes." - Peter Drucker
