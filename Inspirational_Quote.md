@@ -92,3 +92,4 @@
 ### "Truth is like the sun. You can shut it out for a time, but it ain't going away." - Elvis Presley
 ### "Watch what you say, and whatever you say, practice it." - Soyen Shaku
 ### "The hardest arithmetic to master is that which enables us to count our blessings." - Eric Hoffer
+### "The important thing is not what one is born with but what use one makes of that equipment." - Alfred Adler
