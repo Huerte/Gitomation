@@ -110,3 +110,4 @@
 ### "Every strike brings me closer to the next home run." - Babe Ruth
 ### "Love is the absence of judgment." - Dalai Lama
 ### "Feelings come and go like clouds in a windy sky. Conscious breathing is my anchor." - Thich Nhat Hanh
+### "Imagination is the true magic carpet." - Norman Vincent Peale
