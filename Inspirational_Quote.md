@@ -83,3 +83,4 @@
 ### "Ability is a poor man's wealth." - John Wooden
 ### "To get angry is like to revenge yourself for the guilt of others." - Jonathan Swift
 ### "The Truth is realized in an instant; the Act is practiced step by step." - Seungsahn
+### "The guest will judge better of a feast than the cook." - Aristotle
