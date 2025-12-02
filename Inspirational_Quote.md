@@ -96,3 +96,4 @@
 ### "It's your road, and yours alone, others may walk it with you, but no one can walk it for you." - Rumi
 ### "We can either add to our character each day, or we can fritter away our energies in distractions." - Ming-Dao Deng
 ### "A man with outward courage dares to die: a man with inner courage dares to live." - Lao Tzu
+### "There is no truth. There is only perception." - Gustave Flaubert
