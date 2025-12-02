@@ -88,3 +88,4 @@
 ### "You can't make someone feel good about themselves until you feel good about yourself." - Robin Sharma
 ### "You can have results or excuses, but not both." - Arnold Schwarzenegger
 ### "You make your own luck if you stay at it long enough." - Naval Ravikant
+### "Don't give up the fight, Stand up for your rights." - Bob Marley
