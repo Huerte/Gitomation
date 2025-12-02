@@ -76,3 +76,4 @@
 ### "Everything you look at can become a fairy tale and you can get a story from everything you touch." - Hans Christian Andersen
 ### "Peace of mind is that mental condition in which you have accepted the worst." - Lin Yutang
 ### "Just do what must be done. This may not be happiness but it is greatness." - George Bernard Shaw
+### "Who wishes to fight must first count the cost." - Sun Tzu
