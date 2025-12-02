@@ -90,3 +90,4 @@
 ### "You make your own luck if you stay at it long enough." - Naval Ravikant
 ### "Don't give up the fight, Stand up for your rights." - Bob Marley
 ### "Truth is like the sun. You can shut it out for a time, but it ain't going away." - Elvis Presley
+### "Watch what you say, and whatever you say, practice it." - Soyen Shaku
