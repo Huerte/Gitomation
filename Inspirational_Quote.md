@@ -107,3 +107,4 @@
 ### "The more reasons you have for achieving your goal, the more determined you will become." - Brian Tracy
 ### "Curiosity is the most powerful thing you own." - James Cameron
 ### "Your time is limited, so don't waste it living someone elses. life." - Steve Jobs
+### "Every strike brings me closer to the next home run." - Babe Ruth
