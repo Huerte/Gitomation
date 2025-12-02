@@ -111,3 +111,4 @@
 ### "Love is the absence of judgment." - Dalai Lama
 ### "Feelings come and go like clouds in a windy sky. Conscious breathing is my anchor." - Thich Nhat Hanh
 ### "Imagination is the true magic carpet." - Norman Vincent Peale
+### "The attempt to escape from pain, is what creates more pain." - Gabor Mate
