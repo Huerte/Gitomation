@@ -106,3 +106,12 @@
 ### "Do not anticipate trouble, or worry about what may never happen. Keep in the sunlight." - Benjamin Franklin
 ### "The more reasons you have for achieving your goal, the more determined you will become." - Brian Tracy
 ### "Surround yourself only with people who are going to take you higher." - Oprah Winfrey
+### "Curiosity is the most powerful thing you own." - James Cameron
+### "Your time is limited, so don't waste it living someone elses. life." - Steve Jobs
+### "Every strike brings me closer to the next home run." - Babe Ruth
+### "Love is the absence of judgment." - Dalai Lama
+### "Feelings come and go like clouds in a windy sky. Conscious breathing is my anchor." - Thich Nhat Hanh
+### "Imagination is the true magic carpet." - Norman Vincent Peale
+### "The attempt to escape from pain, is what creates more pain." - Gabor Mate
+### "The mind can calculate, but the spirit yearns, and the heart wants what the heart wants." - Stephen King
+### "Actions are the seeds of fate. Deeds grow into destiny." - Harry S. Truman
