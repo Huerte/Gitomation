@@ -121,3 +121,4 @@
 ### "TEAMWORK: the fuel that allows common people attain uncommon results." - Andrew Carnegie
 ### "Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence." - Helen Keller
 ### "We must have strong minds, ready to accept facts as they are." - Harry S. Truman
+### "If you want others to be happy, practice compassion. If you want to be happy, practice compassion." - Dalai Lama
