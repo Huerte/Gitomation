@@ -116,3 +116,4 @@
 ### "The mind can calculate, but the spirit yearns, and the heart wants what the heart wants." - Stephen King
 ### "Actions are the seeds of fate. Deeds grow into destiny." - Harry S. Truman
 ### "The only thing new in the world is the history you do not know." - Harry S. Truman
+### "It will never rain roses: when we want to have more roses, we must plant more roses." - George Eliot
