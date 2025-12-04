@@ -123,3 +123,4 @@
 ### "We must have strong minds, ready to accept facts as they are." - Harry S. Truman
 ### "If you want others to be happy, practice compassion. If you want to be happy, practice compassion." - Dalai Lama
 ### "Don't give up the fight, Stand up for your rights." - Bob Marley
+### "When you repeat a mistake, it is not a mistake anymore: it is a decision." - Paulo Coelho
