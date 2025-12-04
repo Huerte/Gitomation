@@ -127,3 +127,4 @@
 ### "If you can't feed a hundred people, then feed just one." - Mother Teresa
 ### "We have to live life with a sense of urgency so not a minute is wasted." - Les Brown
 ### "In order to carry a positive action, we must develop here a positive vision." - Dalai Lama
+### "A minute's success pays the failure of years." - Robert Browning
