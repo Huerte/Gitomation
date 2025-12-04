@@ -119,3 +119,4 @@
 ### "It will never rain roses: when we want to have more roses, we must plant more roses." - George Eliot
 ### "The best thing to hold onto in life is each other." - Audrey Hepburn
 ### "TEAMWORK: the fuel that allows common people attain uncommon results." - Andrew Carnegie
+### "Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence." - Helen Keller
