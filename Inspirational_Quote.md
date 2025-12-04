@@ -125,3 +125,4 @@
 ### "Don't give up the fight, Stand up for your rights." - Bob Marley
 ### "When you repeat a mistake, it is not a mistake anymore: it is a decision." - Paulo Coelho
 ### "If you can't feed a hundred people, then feed just one." - Mother Teresa
+### "We have to live life with a sense of urgency so not a minute is wasted." - Les Brown
