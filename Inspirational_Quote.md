@@ -129,3 +129,4 @@
 ### "In order to carry a positive action, we must develop here a positive vision." - Dalai Lama
 ### "A minute's success pays the failure of years." - Robert Browning
 ### "Some people are old at 18 and some are young at 90. Time is a concept that humans created." - Yoko Ono
+### "There is no truth. There is only perception." - Gustave Flaubert
