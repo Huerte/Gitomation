@@ -131,3 +131,4 @@
 ### "Some people are old at 18 and some are young at 90. Time is a concept that humans created." - Yoko Ono
 ### "There is no truth. There is only perception." - Gustave Flaubert
 ### "Don't settle, and don't struggle." - Naval Ravikant
+### "As you think, so shall you become." - Bruce Lee
