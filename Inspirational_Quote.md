@@ -136,3 +136,4 @@
 ### "It is well known that those who do not trust themselves never trust others." - Alfred Adler
 ### "It's what you do in the present that will redeem the past and thereby change the future." - Paulo Coelho
 ### "The greatest gift that you can give to others is the gift of unconditional love and acceptance." - Brian Tracy
+### "In the End, we will remember not the words of our enemies, but the silence of our friends." - Martin Luther King, Jr.
