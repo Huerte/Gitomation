@@ -134,3 +134,4 @@
 ### "As you think, so shall you become." - Bruce Lee
 ### "One of the most difficult things is not to change society - but to change yourself." - Nelson Mandela
 ### "It is well known that those who do not trust themselves never trust others." - Alfred Adler
+### "It's what you do in the present that will redeem the past and thereby change the future." - Paulo Coelho
