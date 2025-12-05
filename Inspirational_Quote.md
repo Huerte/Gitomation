@@ -139,3 +139,4 @@
 ### "In the End, we will remember not the words of our enemies, but the silence of our friends." - Martin Luther King, Jr.
 ### "The happiness of your life depends upon the quality of your thoughts; therefore guard accordingly." - Marcus Aurelius
 ### "I dream my painting and I paint my dream." - Vincent van Gogh
+### "Imagination is more important than knowledge." - Albert Einstein
