@@ -132,3 +132,4 @@
 ### "There is no truth. There is only perception." - Gustave Flaubert
 ### "Don't settle, and don't struggle." - Naval Ravikant
 ### "As you think, so shall you become." - Bruce Lee
+### "One of the most difficult things is not to change society - but to change yourself." - Nelson Mandela
