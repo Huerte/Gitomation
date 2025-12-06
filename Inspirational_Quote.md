@@ -141,3 +141,4 @@
 ### "I dream my painting and I paint my dream." - Vincent van Gogh
 ### "Imagination is more important than knowledge." - Albert Einstein
 ### "When the mind is calm, how quickly, how smoothly, how beautifully you will perceive everything." - Paramahansa Yogananda
+### "The only thing worse than being blind is having sight but no vision." - Helen Keller
