@@ -148,3 +148,4 @@
 ### "Everyone must choose one of two pains: The pain of discipline or the pain of regret." - Jim Rohn
 ### "Keep others in suspense, cultivate an air of unpredictability." - Robert Greene
 ### "What would you do if you weren't afraid?" - Spencer Johnson
+### "The biggest mistake we could ever make in our lives is to think we work for anybody but ourselves." - Brian Tracy
