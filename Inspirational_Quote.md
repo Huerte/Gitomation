@@ -146,3 +146,4 @@
 ### "Genius, in truth, means little more than the faculty of perceiving in an unhabitual way." - William James
 ### "You will face many defeats in life, but never let yourself be defeated." - Maya Angelou
 ### "Everyone must choose one of two pains: The pain of discipline or the pain of regret." - Jim Rohn
+### "Keep others in suspense, cultivate an air of unpredictability." - Robert Greene
