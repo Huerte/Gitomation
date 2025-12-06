@@ -144,3 +144,4 @@
 ### "The only thing worse than being blind is having sight but no vision." - Helen Keller
 ### "Every man gotta right to decide his own destiny." - Bob Marley
 ### "Genius, in truth, means little more than the faculty of perceiving in an unhabitual way." - William James
+### "You will face many defeats in life, but never let yourself be defeated." - Maya Angelou
