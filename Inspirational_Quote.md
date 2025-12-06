@@ -147,3 +147,4 @@
 ### "You will face many defeats in life, but never let yourself be defeated." - Maya Angelou
 ### "Everyone must choose one of two pains: The pain of discipline or the pain of regret." - Jim Rohn
 ### "Keep others in suspense, cultivate an air of unpredictability." - Robert Greene
+### "What would you do if you weren't afraid?" - Spencer Johnson
