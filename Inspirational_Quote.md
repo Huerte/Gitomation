@@ -153,3 +153,4 @@
 ### "Show me a hero, and I'll write you a tragedy." - F. Scott Fitzgerald
 ### "The more you praise and celebrate your life, the more there is in life to celebrate." - Oprah Winfrey
 ### "The only way out is through." - Robert Frost
+### "It is better to light a single candle than to curse the darkness." - Eleanor Roosevelt
