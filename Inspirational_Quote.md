@@ -151,3 +151,4 @@
 ### "The biggest mistake we could ever make in our lives is to think we work for anybody but ourselves." - Brian Tracy
 ### "He will win who knows when to fight and when not to fight." - Sun Tzu
 ### "Show me a hero, and I'll write you a tragedy." - F. Scott Fitzgerald
+### "The more you praise and celebrate your life, the more there is in life to celebrate." - Oprah Winfrey
