@@ -154,3 +154,4 @@
 ### "The more you praise and celebrate your life, the more there is in life to celebrate." - Oprah Winfrey
 ### "The only way out is through." - Robert Frost
 ### "It is better to light a single candle than to curse the darkness." - Eleanor Roosevelt
+### "No one ever is defeated until defeat has been accepted as a reality." - Napoleon Hill
