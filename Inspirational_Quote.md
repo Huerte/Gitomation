@@ -160,3 +160,4 @@
 ### "Be confident, not certain." - Eleanor Roosevelt
 ### "I do not exist to impress the world. I exist to live my life in a way that will make me happy." - Richard Bach
 ### "I know of only one duty, and that is to love." - George Bernard Shaw
+### "Every act of creation is first an act of destruction." - Pablo Picasso
