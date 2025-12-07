@@ -157,3 +157,4 @@
 ### "No one ever is defeated until defeat has been accepted as a reality." - Napoleon Hill
 ### "There exists only the present instant; a Now which always and without end is itself new." - Meister Eckhart
 ### "The less you open your heart to others, the more your heart suffers." - Deepak Chopra
+### "Be confident, not certain." - Eleanor Roosevelt
