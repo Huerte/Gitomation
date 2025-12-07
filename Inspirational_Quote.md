@@ -150,3 +150,4 @@
 ### "What would you do if you weren't afraid?" - Spencer Johnson
 ### "The biggest mistake we could ever make in our lives is to think we work for anybody but ourselves." - Brian Tracy
 ### "He will win who knows when to fight and when not to fight." - Sun Tzu
+### "Show me a hero, and I'll write you a tragedy." - F. Scott Fitzgerald
