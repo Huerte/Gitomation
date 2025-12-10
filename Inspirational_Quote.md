@@ -170,3 +170,4 @@
 ### "Great minds discuss ideas. Average minds discuss events. Small minds discuss people." - Eleanor Roosevelt
 ### "Heroes don't need to talk about what they did." - W.P. Kinsella
 ### "The difference between winning and losing is most often not quitting." - Walt Disney
+### "There is a difference between giving directions and giving direction." - Simon Sinek
