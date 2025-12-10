@@ -169,3 +169,4 @@
 ### "What lies behind us and what lies before us are tiny matters compared to what lies within us." - Ralph Waldo Emerson
 ### "Great minds discuss ideas. Average minds discuss events. Small minds discuss people." - Eleanor Roosevelt
 ### "Heroes don't need to talk about what they did." - W.P. Kinsella
+### "The difference between winning and losing is most often not quitting." - Walt Disney
