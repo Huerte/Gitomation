@@ -162,3 +162,4 @@
 ### "I know of only one duty, and that is to love." - George Bernard Shaw
 ### "Every act of creation is first an act of destruction." - Pablo Picasso
 ### "You can not live your life just based on what everyone else thinks." - Joyce Meyer
+### "One day, in retrospect, the years of struggle will strike you as the most beautiful." - Sigmund Freud
