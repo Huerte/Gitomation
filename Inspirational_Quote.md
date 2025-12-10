@@ -164,3 +164,4 @@
 ### "You can not live your life just based on what everyone else thinks." - Joyce Meyer
 ### "One day, in retrospect, the years of struggle will strike you as the most beautiful." - Sigmund Freud
 ### "A person who does not read is no better than one cannot read." - Earl Nightingale
+### "When one does not have what one wants, one must want what one has." - Sigmund Freud
