@@ -166,3 +166,4 @@
 ### "A person who does not read is no better than one cannot read." - Earl Nightingale
 ### "When one does not have what one wants, one must want what one has." - Sigmund Freud
 ### "You'll never find rainbows if you're looking down." - Charlie Chaplin
+### "What lies behind us and what lies before us are tiny matters compared to what lies within us." - Ralph Waldo Emerson
