@@ -168,3 +168,4 @@
 ### "You'll never find rainbows if you're looking down." - Charlie Chaplin
 ### "What lies behind us and what lies before us are tiny matters compared to what lies within us." - Ralph Waldo Emerson
 ### "Great minds discuss ideas. Average minds discuss events. Small minds discuss people." - Eleanor Roosevelt
+### "Heroes don't need to talk about what they did." - W.P. Kinsella
